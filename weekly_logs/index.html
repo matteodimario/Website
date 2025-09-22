@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily logs</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .post {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .post:last-child {
+            border-bottom: none;
+        }
+        .post-date {
+            color: #777;
+            font-size: 0.9em;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .more-content {
+            display: none;
+        }
+        .read-more-link {
+            cursor: pointer;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Back to Home Link -->
+        <a href="../index.html" class="back-link">← Back</a>
+
+        <h1>Welcome to daily logs!</h1>
+        <p>I try to share my favourite learning of the week each week. 
+        Some days it will be a thought, some days it will be an app, an article, or a video, a conversation,
+        and other days it will be a joke (no promises it will be funny).</p>
+        <p>In addition, at the end of each post, I add the Notion pages for that week.</p>
+        
+        <!-- Blog Post 1 -->
+        <article class="post">
+            <h2>What this will be</h2>
+            <p class="post-date">Published on: September 22, 2025</p>
+            <p>
+                Hello world!
+                This is a test post. My learning of the day is to be consistent: 
+                <a href="https://www.youtube.com/watch?v=65nfbW-27ps">AGE 12 TO MARRIED – I Took A Photo Every Day - YouTube</a>. I always wish I started something sooner. But then I rarely do.
+                <span class="more-content" id="moreContent">
+                    So this is one such attempt. I was fascinated by the commitment to take a picture every single day for such a long part of life.
+                    It takes so much vision, discipline and commitment. My dream would be to be 1/7 as consistent as him.
+                    Only time will tell. For now 1/1.
+                    There are still a lot of things I want to figure out about this, but for now see you in around seven days.
+                </span>
+            </p>
+            <a id="readMoreLink" class="read-more-link">Read more</a>
+        </article>
+    </div>
+
+    <script>
+        const readMoreLink = document.getElementById('readMoreLink');
+        const moreContent = document.getElementById('moreContent');
+
+        readMoreLink.addEventListener('click', function(event) {
+            if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+                moreContent.style.display = 'inline';
+                readMoreLink.textContent = 'Read less';
+            } else {
+                moreContent.style.display = 'none';
+                readMoreLink.textContent = 'Read more';
+            }
+        });
+    </script>
+
+</body>
+</html>
